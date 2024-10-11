@@ -102,3 +102,8 @@ hist(pointsDifferenceTable)
 #Not had time to do DNFs, bet that can be modeled into combined score matrix
 #As just getting 0 score x% or time. 
 
+#The distribution is as expect then normal.
+statsPointsDiff<-descdist(pointsDifferenceTable)
+
+#Get the probabilty that the results < 0. I.e. Ford Win
+pnorm(0.0,mean=statsPointsDiff$mean,sd=statsPointsDiff$sd)
