@@ -16,6 +16,7 @@ plotdist(x, histo = TRUE, demp = TRUE)
 
 
 stats<-descdist(x) #This ascualtl shows it as a Beta distribution, but I just used normal.
+#rbeta exists if we want in place of rnorm
 simulated<-rnorm(10000,mean=stats$mean,sd=stats$sd)
 simulated<-as.integer(simulated[!simulated<1])
 
